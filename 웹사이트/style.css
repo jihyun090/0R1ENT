@@ -1,0 +1,158 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+overflow: hidden;
+}
+
+.scene {
+display: none;
+width: 100vw;
+height: 100vh;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 20px;
+position: relative;
+}
+
+.scene.active {
+display: flex;
+}
+
+.white-scene {
+background-color: #ffffff;
+color: #000000;
+}
+
+.red-scene {
+background-color: #cc0000;
+color: #000000;
+}
+
+.black-scene {
+background-color: #000000;
+}
+
+.black-msg {
+color: #ffffff;
+font-size: 0.9rem;
+}
+
+/* 장면 전환 페이드 인 (장면 5, 6, 7 제외) */
+.fade-in {
+animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+/* 이미지: 처음엔 숨김, 페이드인으로 표시 */
+.logo-img {
+width: 80px;
+height: auto;
+margin-bottom: 30px;
+border: 0;
+opacity: 0;
+}
+
+.logo-img.show {
+animation: fadeIn 1s ease-in forwards;
+}
+
+.main-text {
+font-size: 2rem;
+line-height: 1.6;
+max-width: 800px;
+}
+
+/* 텍스트 리빌 효과 (순수 리빌만, 타 효과 금지) */
+.reveal-text {
+opacity: 0;
+}
+
+.reveal-text.revealed {
+animation: textReveal 1.2s ease forwards;
+}
+
+@keyframes textReveal {
+from {
+opacity: 1;
+clip-path: inset(0 100% 0 0);
+}
+to {
+opacity: 1;
+clip-path: inset(0 0 0 0);
+}
+}
+
+/* 화살표 */
+.arrow {
+margin-top: 40px;
+font-size: 1.2rem;
+font-weight: 100;
+color: #000000;
+cursor: pointer;
+opacity: 0;
+pointer-events: none;
+}
+
+.arrow.show {
+animation: fadeIn 1s ease-in forwards;
+pointer-events: auto;
+}
+
+/* 장면 5 버튼 */
+.button-group {
+margin-top: 40px;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.black-btn {
+background-color: #000000;
+color: #ffffff;
+border: none;
+border-radius: 12px;
+padding: 12px 40px;
+font-size: 1.1rem;
+cursor: pointer;
+}
+
+.hidden {
+display: none;
+}
+
+/* 장면 6, 7 */
+.small-text {
+font-size: 1rem;
+}
+
+.infinite-text {
+font-size: 1rem;
+letter-spacing: 0.17em;
+word-break: break-all;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+display: flex;
+flex-direction: column-reverse;
+text-align: right;
+}
+
+/* 장면 8 링크 */
+.link-text {
+margin-top: 3em;
+font-size: 0.9rem;
+color: #000000;
+text-decoration: underline;
+cursor: pointer;
+}

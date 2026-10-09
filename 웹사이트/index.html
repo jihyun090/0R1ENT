@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>은계</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- 장면 1 -->
+<div id="scene1" class="scene white-scene active">
+<a href="https://ibb.co/MxR1hyrJ" class="logo-link" target="_blank"><img src="https://i.ibb.co/kshDyVjP/1089-20261009201534.png" alt="1089-20261009201534" class="logo-img"></a>
+<h1 class="main-text reveal-text">은계에 합격하신 여러분을 축하드립니다.</h1>
+<div class="arrow" onclick="goToScene('scene2')">➔</div>
+</div>
+
+<!-- 장면 2 -->
+<div id="scene2" class="scene white-scene">
+<a href="https://ibb.co/MxR1hyrJ" class="logo-link" target="_blank"><img src="https://i.ibb.co/kshDyVjP/1089-20261009201534.png" alt="1089-20261009201534" class="logo-img"></a>
+<h1 class="main-text reveal-text">이래저래 수고가 많으셨습니다. 합격을위해 맘고생하셨던 분들도, 급박한 마음에 시달리셨던 분들도, 모든 분들께 감사인사를 올립니다.</h1>
+<div class="arrow" onclick="goToScene('scene3')">➔</div>
+</div>
+
+<!-- 장면 3 -->
+<div id="scene3" class="scene white-scene">
+<a href="https://ibb.co/MxR1hyrJ" class="logo-link" target="_blank"><img src="https://i.ibb.co/kshDyVjP/1089-20261009201534.png" alt="1089-20261009201534" class="logo-img"></a>
+<h1 class="main-text reveal-text">비록 합격하지 못하셨더라도 함께했었던 추억이, 한 권의 책 속 가장 오래 머무르게되는 한 장의 장이 되기를 바랍니다.</h1>
+<div class="arrow" onclick="goToScene('scene4')">➔</div>
+</div>
+
+<!-- 장면 4 -->
+<div id="scene4" class="scene white-scene">
+<a href="https://ibb.co/MxR1hyrJ" class="logo-link" target="_blank"><img src="https://i.ibb.co/kshDyVjP/1089-20261009201534.png" alt="1089-20261009201534" class="logo-img"></a>
+<h1 class="main-text reveal-text">만약 추후 고된 일을 겪게된다 하더라도 극복해내실 수 있게되기를, 장래의 발자취를 따라 걸어나가실 수 있기를, 저희 은계는 진정으로 소원합니다.</h1>
+<div class="arrow" onclick="goToScene('scene5')">➔</div>
+</div>
+
+<!-- 장면 5 -->
+<div id="scene5" class="scene white-scene">
+<a href="https://ibb.co/MxR1hyrJ" class="logo-link" target="_blank"><img src="https://i.ibb.co/kshDyVjP/1089-20261009201534.png" alt="1089-20261009201534" class="logo-img"></a>
+<h1 id="scene5-text" class="main-text reveal-text">이상입니다. 그럼 은계와 함께 해주시겠습니까?</h1>
+<div class="button-group">
+<button id="yes-btn" class="black-btn" onclick="confirmYes()">네.</button>
+<button class="black-btn" onclick="showBlack()">아니오.</button>
+</div>
+</div>
+
+<!-- 아니오 전용 검은 화면 -->
+<div id="black-screen" class="scene black-scene">
+<p id="black-text" class="black-msg hidden">다시 접속하여 주십시오.</p>
+</div>
+
+<!-- 장면 6 -->
+<div id="scene6" class="scene red-scene">
+<p class="small-text">啊</p>
+</div>
+
+<!-- 장면 7 -->
+<div id="scene7" class="scene red-scene">
+<p id="infinite-text" class="infinite-text">啊</p>
+</div>
+
+<!-- 장면 8 -->
+<div id="scene8" class="scene white-scene">
+<a href="https://ibb.co/MxR1hyrJ" class="logo-link" target="_blank"><img src="https://i.ibb.co/kshDyVjP/1089-20261009201534.png" alt="1089-20261009201534" class="logo-img" id="scene8-img"></a>
+<h1 class="main-text">여러분들의 향후를 응원합니다.</h1>
+<a class="link-text" href="https://open.kakao.com/o/goseF5Qi" target="_blank">https://open.kakao.com/o/goseF5Qi</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
